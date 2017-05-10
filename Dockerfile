@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER "Giovanni Colapinto" alfheim@syshell.net
+MAINTAINER "Misha Behersky" bmwant@gmail.com
 
 RUN rm -rf /var/lib/apt/lists/ \
   && apt-get update \

@@ -1,8 +1,7 @@
 # Broker settings
-BROKER_URL = 'amqp://guest:guest@localhost:5672//'
+BROKER_URL = 'redis://localhost:6379/0'
 
-# RabbitMQ management api
-broker_api = 'http://guest:guest@localhost:15672/api/'
+broker_api = 'redis://localhost:6379/0'
 
 # Enable debug logging
 logging = 'DEBUG'
@@ -22,5 +21,6 @@ xheaders = True
 # A database file to use if persistent mode is enabled
 db = '/var/flower/db/flower.db'
 
-# Enable persistent mode. If the persistent mode is enabled Flower saves the current state and reloads on restart
+# Enable persistent mode.
+# If the persistent mode is enabled Flower saves the current state and reloads on restart
 persistent = True

@@ -1,12 +1,16 @@
 # celery-flower
 
-Container with [flower](http://flower.readthedocs.org/en/latest/) based on ubuntu
+Container with [flower](http://flower.readthedocs.org/en/latest/) based on ubuntu 14.04.
 
 The container is configured to use flower persistence.
 
+Default broker used is Redis.
+
 To start the container execute the following commands (docker >= 1.9):
 
-docker run --name some-flower -v /var/docker_conf/flower:/etc/flower -v /var/docker_data/flower:/var/flower/db -d njordr/celery-flower
+```
+docker run --net=host -v /var/flower:/var/flower/db -d bmwant/celery-flower
+```
 
-You can find an example config in my [git repo](https://github.com/njordr/celery-flower)
+You can find an example config [here](https://github.com/bmwant/celery-flower/blob/master/flowerconfig.py)
 
